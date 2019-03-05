@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!--<!DOCTYPE student_details SYSTEM "student_details.dtd" >-->
+
+
+
+<student_details>
+	<class val="12">
+		
+			<roll roll_num="1">
+				<name>John</name>
+				<age>18</age>
+				<marks>95</marks>	
+			</roll>
+
+			<roll roll_num="">
+				<name>John</name>
+				<age>18</age>
+				<marks>95</marks>	
+			</roll>
+
+		
+	</class>
+
+</student_details>

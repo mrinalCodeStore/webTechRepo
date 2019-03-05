@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+	<title>Mobilefish.com - Validate XML with DTDs using IE browser</title>
+	<!--
+	Author: Robert Lie (mobilefish.com)
+	More information see: https://www.mobilefish.com/tutorials/j2ee_dd/j2ee_dd_quickguide_validate_xml_dtd.html
+	-->
+	<script type="text/javascript" language="JavaScript">
+	//<![CDATA[
+
+	var xmlDocumentObject;
+
+	function validateXML(){
+	  xmlDocumentObject = new ActiveXObject("microsoft.XMLDOM");
+	  xmlDocumentObject.onreadystatechange = changeHandler;
+	  xmlDocumentObject.load('web.xml');
+	}
+
+	function changeHandler(){
+		if(xmlDocumentObject.readyState == 4){
+	      var errorText = xmlDocumentObject.parseError.srcText;
+	      errorText = xmlDocumentObject.parseError.srcText.replace(/\</g, "&lt");
+	      errorText = errorText.replace(/\>/g, "&gt");
+	      if (xmlDocumentObject.parseError.errorCode != 0) {
+	          displayDIV.innerHTML = "Error in " +
+	          xmlDocumentObject.parseError.url +
+	          " line " + xmlDocumentObject.parseError.line +
+	          " position " + xmlDocumentObject.parseError.linepos +
+	          ":<br />Source: " + errorText +
+	          "<br />" + xmlDocumentObject.parseError.reason +
+	          "<br />" +  "Error: " +
+	          xmlDocumentObject.parseError.errorCode;
+	      } else {
+	          displayDIV.innerHTML = "Document validated OK.<br />";
+	      }
+	  }
+	}
+	//]]>
+	</script>
+	</head>
+
+	<body>
+		<h1>Validate XML with DTDs using IE 7 browser</h1>
+		<form name="testForm" action="javascript:void(null);">
+			<input type="button" value="Validate XML" onclick="validateXML()" />
+		</form>
+		<br /><br />
+		<div id="displayDIV"></div>
+
+	</body>
+</html>

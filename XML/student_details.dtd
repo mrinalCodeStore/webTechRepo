@@ -1,0 +1,4 @@
+
+
+<!ELEMENT student_details (class)*>
+<!ELEMENT class(roll)>

@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+
+	<!ELEMENT student_details (class)>
+	<!ELEMENT class (roll)*>
+	<!ELEMENT roll (name,age,marks)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT age (#PCDATA)>
+	<!ELEMENT marks (#PCDATA)>
+	<!ATTLIST class val CDATA "12" >
+	<!ATTLIST roll roll_num CDATA "" >
+
