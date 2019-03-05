@@ -1,0 +1,79 @@
+<html>
+	<head>
+
+		<title>ComplexPage</title>
+		<script type="text/javascript" src="../javaScript/script.js"></script>
+		<link type="text/css" href="../styleSheet/style1.css" rel="stylesheet"/>
+		<base href="www.mydamngreatsite.com">
+		<meta charset="utf-8">
+		
+	</head>
+	<body>
+		
+		<div id='banner'>
+			<img  width=100% height=150 src="../stylesheet/Chrysanthemum.jpg" alt='banner-image' />
+		</div>
+
+		<div id='mid'>
+			<div id='mid-left'>
+				<!---------------------------------------------------------------->
+				 <dl>  <!-- description List-->
+  					<dt>Coffee</dt> <!--defination term-->
+  					<dd> <!--term defination-->
+  						Black hot drinkBlack hot drinkBlack hot drinkBlack hot drinkBlack hot drinkBlack hot drinkBlack hot drinkBlack ho
+  					</dd>
+  					<dt>Milk</dt>
+  					<dd>White cold drink</dd>
+				</dl> 
+				<!---------------------------------------------------------------->
+				<select onchange="scheduleA(this)">
+					<option value='1' >class 1</option>
+					<option value='2' >class 2</option>
+					<option value='3' selected>class 3</option>
+					<option value='4'>class 4</option>
+				</select>
+				<!------------------------------------------------------------>
+				<center><h3 onclick="printh()" target='_blank'>this will launch an event</h3></center>
+				<input type='reset' value='reset' />
+				<ul>
+					<li>html</li>
+					<li>CSS</li>
+					<li>javaScript</li>
+				</ul>
+				<ol>
+					<li>assembler</li>
+					<li>complier</li>
+					<li>interpreter</li>
+				</ol>
+				<a href='page4.html' target="_blank">new tab gets opened</a><hr>
+				<a href='page4.html' target="_self">new tab gets opened</a>
+				
+			</div>
+			<div id='mid-right'>
+
+				<!---------------------------------------------------------------->
+				<form action="page4.html" method="post" >
+					<table width=100% cellpadding="10"  bgcolor="#ff6600">
+						<tr bgcolor="#ffffff" align="center"><td><label id >Username</label></td>					
+						<td  ><input type="text" id='userNm' width=300 /></td></tr>
+						<tr></tr>
+						<tr bgcolor="#ffffff" align="center"><td><label>password</label></td>					
+						<td><input type='text' id='pswd' width=300 /></td></tr>
+						<tr></tr>
+						<tr bgcolor="#ffffff"><td colspan="2" align="center"><input type='submit' value='submit'></td></tr>
+						<tr><td><input type='checkbox' value='' />keep me loged in</td></tr>
+					</table>
+				</form>
+				<!---------------------------------------------------------------->
+
+			</div>
+			
+		</div>
+
+		<div id='footer'>
+			
+		</div>
+		
+
+	</body>
+</html>
